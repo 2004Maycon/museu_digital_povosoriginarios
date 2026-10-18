@@ -21,15 +21,25 @@ body {
 }
 
 .cabecalho {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     gap: clamp(1rem, 2vw, 1.75rem);
     min-height: 120px;
-    padding: 1rem clamp(1rem, 4vw, 4rem);
-    border-bottom: 1px solid #ded8c9;
-    background: #fffdf8;
+    padding: 1rem clamp(1rem, 4vw, 4rem) 1.4rem;
+    background: linear-gradient(110deg, #fffdf8 0%, #eaf1ed 100%);
     box-shadow: 0 4px 18px rgb(38 57 47 / 7%);
+}
+
+.cabecalho::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 12px;
+    background: linear-gradient(90deg, #527c86, #8da99a 48%, #d1b982);
+    content: "";
 }
 
 .cabecalho img {
@@ -37,8 +47,10 @@ body {
     width: clamp(56px, 6vw, 84px);
     height: clamp(56px, 6vw, 84px);
     object-fit: contain;
-    border-radius: 50%;
+    border: 2px solid #c3d4cc;
+    border-radius: 1rem;
     background: #f0eadb;
+    box-shadow: 0 4px 12px rgb(38 57 47 / 12%);
 }
 
 .cabecalho h1 {
@@ -53,7 +65,7 @@ body {
 }
 
 .cabecalho h1 span {
-    color: #9b5b35;
+    color: #527c86;
     font-weight: 500;
 }
 
@@ -68,6 +80,8 @@ body {
 }
 
 .navegacao a {
+    padding: 0.45rem 0.7rem;
+    border-radius: 0.5rem;
     color: #355342;
     font-size: clamp(0.9rem, 1.1vw, 1rem);
     font-weight: 650;
@@ -79,10 +93,9 @@ body {
 .navegacao a:hover,
 .navegacao a:focus-visible,
 .navegacao a[aria-current="page"] {
+    background: #f0eadb;
     color: #9b5b35;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.3em;
+    text-decoration: none;
 }
 
 .pagina-povo {
@@ -162,7 +175,7 @@ body {
         grid-template-columns: auto minmax(0, 1fr);
         gap: 0.75rem 1rem;
         min-height: 0;
-        padding: 1rem clamp(1rem, 3vw, 2rem) 0.75rem;
+        padding: 1rem clamp(1rem, 3vw, 2rem) 1.15rem;
     }
 
     .cabecalho h1 {
