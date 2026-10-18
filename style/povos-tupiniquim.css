@@ -85,7 +85,7 @@ body {
     text-underline-offset: 0.3em;
 }
 
-.pagina-em-desenvolvimento {
+.pagina-povo {
     width: min(100% - 2rem, 1120px);
     margin: 0 auto;
     padding: clamp(4rem, 10vw, 8rem) 0;
@@ -101,7 +101,7 @@ body {
     text-transform: uppercase;
 }
 
-.pagina-em-desenvolvimento h2 {
+.pagina-povo h2 {
     max-width: 800px;
     margin: 0;
     color: #234335;
@@ -111,7 +111,7 @@ body {
     text-wrap: balance;
 }
 
-.pagina-em-desenvolvimento > p:not(.etiqueta-pagina) {
+.pagina-povo > p:not(.etiqueta-pagina) {
     max-width: 700px;
     margin: 1.25rem 0 0;
     color: #4c5d51;
@@ -119,7 +119,30 @@ body {
     line-height: 1.8;
 }
 
-.pagina-em-desenvolvimento a {
+.foto-povo {
+    width: min(100%, 700px);
+    margin: 1.5rem 0 0;
+}
+
+.foto-povo-reservada {
+    display: grid;
+    width: 100%;
+    min-height: 220px;
+    aspect-ratio: 16 / 9;
+    place-items: center;
+    padding: 1rem;
+    border: 2px dashed #c8bca7;
+    border-radius: 1rem;
+    color: #687368;
+    background: linear-gradient(135deg, #eee9df, #f7f4ec);
+    text-align: center;
+}
+
+.foto-povo-reservada span {
+    font-weight: 650;
+}
+
+.pagina-povo a {
     display: inline-block;
     margin-top: 1.5rem;
     color: #355342;
@@ -128,8 +151,8 @@ body {
     text-underline-offset: 0.25em;
 }
 
-.pagina-em-desenvolvimento a:hover,
-.pagina-em-desenvolvimento a:focus-visible {
+.pagina-povo a:hover,
+.pagina-povo a:focus-visible {
     color: #9b5b35;
 }
 
@@ -156,7 +179,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .pagina-em-desenvolvimento {
+    .pagina-povo {
         width: min(100% - 1.5rem, 1120px);
         padding: 3rem 0;
     }
