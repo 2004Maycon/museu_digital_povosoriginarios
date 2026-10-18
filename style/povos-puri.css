@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #26392f;
+    background: #f7f4ec;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: #f7f4ec;
+}
+
+.cabecalho {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    min-height: 120px;
+    padding: 1rem clamp(1rem, 4vw, 4rem);
+    border-bottom: 1px solid #ded8c9;
+    background: #fffdf8;
+    box-shadow: 0 4px 18px rgb(38 57 47 / 7%);
+}
+
+.cabecalho img {
+    flex: 0 0 auto;
+    width: clamp(56px, 6vw, 84px);
+    height: clamp(56px, 6vw, 84px);
+    object-fit: contain;
+    border-radius: 50%;
+    background: #f0eadb;
+}
+
+.cabecalho h1 {
+    flex: 0 1 auto;
+    margin: 0;
+    color: #234335;
+    font-size: clamp(1.25rem, 2.4vw, 2.15rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+}
+
+.cabecalho h1 span {
+    color: #9b5b35;
+    font-weight: 500;
+}
+
+.navegacao {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.35rem clamp(0.9rem, 1.8vw, 1.75rem);
+    min-width: 0;
+}
+
+.navegacao a {
+    color: #355342;
+    font-size: clamp(0.9rem, 1.1vw, 1rem);
+    font-weight: 650;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navegacao a:hover,
+.navegacao a:focus-visible,
+.navegacao a[aria-current="page"] {
+    color: #9b5b35;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+}
+
+.pagina-puri {
+    width: min(100% - 2rem, 1120px);
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.apresentacao-puri {
+    max-width: 780px;
+    margin: 0 auto clamp(3rem, 7vw, 5rem);
+}
+
+.chamada-puri {
+    margin: 0 0 0.8rem;
+    color: #9b5b35;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.apresentacao-puri h2,
+.cabecalho-secao-puri h2 {
+    margin: 0;
+    color: #234335;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+
+.introducao-puri {
+    max-width: 700px;
+    margin: 1.25rem 0 0;
+    color: #4c5d51;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.cabecalho-secao-puri {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cabecalho-secao-puri h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+}
+
+.cabecalho-secao-puri > p {
+    max-width: 360px;
+    margin: 0 0 0.2rem;
+    color: #687368;
+    line-height: 1.65;
+}
+
+.grupos-vocabulario-puri {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.25rem;
+}
+
+.grupo-vocabulario-puri {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border: 1px solid #e5dfd2;
+    border-radius: 1rem;
+    background: #fffdf8;
+    box-shadow: 0 8px 24px rgb(38 57 47 / 5%);
+}
+
+.grupo-vocabulario-puri h3 {
+    margin: 0 0 1.25rem;
+    color: #234335;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.grupo-vocabulario-puri dl {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+}
+
+.grupo-vocabulario-puri dl > div {
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid #eee9df;
+}
+
+.grupo-vocabulario-puri dl > div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.grupo-vocabulario-puri dt {
+    color: #9b5b35;
+    font-weight: 700;
+}
+
+.grupo-vocabulario-puri dd {
+    margin: 0.3rem 0 0;
+    color: #536156;
+    line-height: 1.55;
+}
+
+.nota-fonte-puri {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid #9b5b35;
+    border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
+    background: #eee9df;
+}
+
+.nota-fonte-puri p {
+    margin: 0;
+    color: #4c5d51;
+    line-height: 1.65;
+}
+
+.nota-fonte-puri a {
+    flex: 0 0 auto;
+    color: #234335;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+.nota-fonte-puri a:hover,
+.nota-fonte-puri a:focus-visible {
+    color: #9b5b35;
+}
+
+@media (max-width: 1000px) {
+    .cabecalho {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.75rem 1rem;
+        min-height: 0;
+        padding: 1rem clamp(1rem, 3vw, 2rem) 0.75rem;
+    }
+
+    .cabecalho h1 {
+        font-size: clamp(1rem, 2.8vw, 1.6rem);
+    }
+
+    .navegacao {
+        grid-column: 1 / -1;
+        justify-content: center;
+        gap: 0.6rem clamp(1rem, 3vw, 2rem);
+        padding: 0.75rem 0 0.25rem;
+        border-top: 1px solid #eee9df;
+    }
+
+    .grupos-vocabulario-puri {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .pagina-puri {
+        width: min(100% - 1.5rem, 1120px);
+        padding: 2.5rem 0;
+    }
+
+    .cabecalho-secao-puri,
+    .nota-fonte-puri {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .grupos-vocabulario-puri {
+        grid-template-columns: 1fr;
+    }
+
+    .nota-fonte-puri a {
+        flex-basis: auto;
+    }
+}
